@@ -9,7 +9,7 @@ explains some of the theory behind the steps that follow.
 
 1. Fetch the source code for this example.
    ````
-   git clone https://github.com/hnarayanan/kubernetes-django.git
+   git clone https://github.com/yasin-cs-ko-ak/kubernetes-django.git
    ````
 
 2. [Install Docker][docker-install].
@@ -151,12 +151,12 @@ kubectl describe svc database
 
 ### Django app running within Gunicorn
 
-We begin with three app pods (copies of the orange app container)
+We begin with three app pods (copies of the django app container)
 talking to the single database.
 
 ````
 cd kubernetes/app
-kubectl create -f replication-controller-orange.yaml
+kubectl create -f replication-controller-app-django.yaml
 kubectl get pods
 
 kubectl describe pod <pod-id>
