@@ -8,15 +8,13 @@ spec:
   replicas: 3
   selector:
     app: django
-    app: app-django
   template:
     metadata:
       labels:
         app: django
-        app: app-django
     spec:
       containers:
-        - name: app
+        - name: app-django
           image: hnarayanan/djangogirls-app:1.2-orange
           env:
             - name: MY_POD_NAME
